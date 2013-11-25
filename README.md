@@ -1,66 +1,73 @@
-****************************************************
+CybOX XML to OVAL XML Converter
+===============================
 
-      CybOX v2.0.1 XML -> OVAL 5.7 XML Converter Script
+Convert CybOX XML to OVAL XML
 
- Copyright (c) 2013 - The MITRE Corporation
- All rights reserved. See LICENSE.txt for more details.
+**Version** 0.2 BETA
 
-****************************************************
+    Copyright (c) 2013 - The MITRE Corporation
+    All rights reserved. See LICENSE.txt for more details.
 
-BY USING THE CYBOX TO OVAL SCRIPT, YOU SIGNIFY YOUR ACCEPTANCE OF THE TERMS AND 
-CONDITIONS OF USE.  IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE CYBOX TO OVAL 
-SCRIPT.
+    BY USING THIS PROGRAM, YOU SIGNIFY YOUR ACCEPTANCE OF THE TERMS AND CONDITIONS
+    OF USE.  IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THIS PROGRAM.
 
-For more information, please refer to the terms.txt file.
+Overview
+--------
+The CybOX-to-OVAL script generates OVAL 5.7 definitions, tests, and objects
+from a CybOX document. Currently this is limited to CybOX's File and WinRegistryKey 
+objects.
 
-########################################################################
-#CybOX v2.0.1 XML --> OVAL XML Generation Script                       #
-#Generates OVAL 5.7 definitions/tests/objects from CyBOX v2.0.1 XML    #
-#                                                               	   #
-#Compatible with content produced using CybOX v1.0 draft               #
-#v0.2 BETA - extracts files and registry keys                          #
-#08/23/2012                                                            #
-#                                                                      #
-########################################################################
-# CybOX - http://cybox.mitre.org                                       #
-# OVAL - http://oval.mitre.org                                         #
-########################################################################
---------------------------------------------------------------------------------
---Installation Notes------------------------------------------------------------
+Compatible with:
+* [CybOX 2.0.1](http://cybox.mitre.org/language/version2.0.1/)
+* [OVAL 5.7](https://oval.mitre.org/archive/version5.7/index.html)
 
-This script depends on the following:
-python-cybox v2.0.1.x
+Installation
+------------
 
-To install dependencies, run the following command(s):
-$ pip install cybox
+Download and extract the included files into your directory of choice. 
 
-This script was created using Python 2.7.x, and so may not be compatible with 3.0.x.
---------------------------------------------------------------------------------
---Included Files----------------------------------------------------------------
+CybOX-to-OVAL requires Python 2.X. It was developed using Python 2.7, and may work 
+under Python 2.6. It is not compatible with Python 3.
 
-README: this file.
-cybox_to_oval.py: the CybOX XML to OVAL XML Python driver.
-cybox_to_oval_processor.py: the main CybOX XML to OVAL XML converter class.
-cybox_oval_mappings.py: the CybOX to OVAL mappings class.
-oval57.py: the OVAL 5.7 Python bindings used by the script.
-terms.txt: the terms of usage for this script.
---------------------------------------------------------------------------------
---Usage Notes-------------------------------------------------------------------
+### Dependencies 
 
-There are two main command line parameters for this script:
+* [python-cybox](https://pypi.python.org/pypi/cybox) - A Python library for CybOX
 
--i: the path to the input CybOX XML file
+You can install the dependencies using pip:
 
--o: the path to the output OVAL XML file
+    $ pip install cybox
 
-To use the script, run the following command:
+**NOTE**: Installing LXML (which python-cybox depends on) on Ubuntu requrires the
+python-dev, libxml2-dev, and libxslt1-dev packages to be installed. 
+Follow the link for instructions on installing python-cybox and LXML on Windows.
 
-python cybox_to_oval.py -i <cybox_xml_file> -o <oval_xml_file>
 
-For verbose error output (printing of tracebacks), you can specify a -v as the first parameter:
+Usage
+-----
 
-python cybox_to_oval.py -v -i <cybox_xml_file> -o <oval_xml_file>
+    python cybox_to_oval.py <flags> -i <cybox xml file> -o <oval xml file>
+    
+    Available Flags:
+        -v: Verbose output mode. Lists any skipped observable items and also prints traceback for errors.
+        
+### Example files
 
-For the latest version of the script, please check the CyBOX GitHub Repository
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+OpenIOC-to-CybOX comes with example input and output files. You can use these to see an example
+of the program's output, or to verify that you have installed the program correctly:    
+        
+    $ python cybox_to_oval.py -i examples/cybox.in.xml -o oval.xml
+    $ diff oval.xml examples/oval.out.xml
+    
+The cybox.in.xml file contains one FileObject and one WinRegistryKey object.
+
+Contributing
+------------
+
+Bug reports and feature requests are welcome and encouraged. Pull requests are especially appreciated. 
+Feel free to use the issue tracker on GitHub or send an email directly to <cybox@mitre.org>.
+
+More information
+----------------
+
+* CybOX - http://cybox.mitre.org/
+* OVAL - http://oval.mitre.org/
