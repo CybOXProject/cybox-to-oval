@@ -3,7 +3,7 @@
         <oval:product_name>CybOX XML to OVAL Script</oval:product_name>
         <oval:product_version>0.2</oval:product_version>
         <oval:schema_version>5.7</oval:schema_version>
-        <oval:timestamp>2013-09-20T16:20:10.464117</oval:timestamp>
+        <oval:timestamp>2014-01-24T14:54:15.729740</oval:timestamp>
     </generator>
     <definitions>
         <definition deprecated="false" version="1" id="oval:cybox_to_oval:def:1" class="miscellaneous">
