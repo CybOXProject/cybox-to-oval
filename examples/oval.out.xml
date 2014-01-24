@@ -1,9 +1,9 @@
 <oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows http://oval.mitre.org/language/version5.7/ovaldefinition/complete/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 http://oval.mitre.org/language/version5.7/ovaldefinition/complete/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-common-5 http://oval.mitre.org/language/version5.7/ovaldefinition/complete/oval-common-schema.xsd">
     <generator>
         <oval:product_name>CybOX XML to OVAL Script</oval:product_name>
-        <oval:product_version>0.2</oval:product_version>
+        <oval:product_version>2.1.0</oval:product_version>
         <oval:schema_version>5.7</oval:schema_version>
-        <oval:timestamp>2014-01-24T14:54:15.729740</oval:timestamp>
+        <oval:timestamp>2014-01-24T15:15:16.777928</oval:timestamp>
     </generator>
     <definitions>
         <definition deprecated="false" version="1" id="oval:cybox_to_oval:def:1" class="miscellaneous">

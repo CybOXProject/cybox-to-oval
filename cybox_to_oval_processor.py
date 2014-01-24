@@ -145,7 +145,7 @@ class cybox_to_oval_processor(object):
         #Add the generator to the defs
         oval_gen = oval.GeneratorType()
         oval_gen.set_product_name('CybOX XML to OVAL Script')
-        oval_gen.set_product_version("0.2")
+        oval_gen.set_product_version("2.1.0")
         oval_gen.set_schema_version('5.7')
         #Generate the datetime
         oval_gen.set_timestamp(self.__generate_datetime())

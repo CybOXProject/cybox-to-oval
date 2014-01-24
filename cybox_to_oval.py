@@ -1,5 +1,5 @@
 #CybOX -> OVAL Translator
-#Generates valid OVAL 5.7 XML output from CybOX v1.0 XML
+#Generates valid OVAL 5.7 XML output from CybOX v2.1 XML
 #Supports Windows files, registry keys, and processes
 
 # Copyright (c) 2014, The MITRE Corporation. All rights reserved.
@@ -15,7 +15,7 @@ def usage():
     
 USAGE_TEXT = """
 CybOX --> OVAL XML Converter Utility
-v0.1 BETA // Compatible with CybOX v1.0/OVAL 5.7
+v2.1.0 // Compatible with CybOX v2.1/OVAL 5.7
 
 Usage: python cybox_to_oval.py <flags> -i <cybox xml file> -o <oval xml file>
 
