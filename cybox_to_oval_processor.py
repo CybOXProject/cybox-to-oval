@@ -59,7 +59,7 @@ class cybox_to_oval_processor(object):
 
     #Process a single observable composition and create the associated definition structure
     def process_observable_composition(self, observable_composition, oval_criteria, observables):
-        obs_criteria = oval.CriteriaType(operator = observable_composition.get_Operator())
+        obs_criteria = oval.CriteriaType(operator = observable_composition.get_operator())
         for observable in observable_composition.Observable:
             if observable.id is not None and observable.id not in self.converted_ids:
                 self.process_observable(observable, obs_criteria, observables)
@@ -82,7 +82,6 @@ class cybox_to_oval_processor(object):
                 oval_def.set_criteria(oval_criteria)
                 self.oval_defs.add_definition(oval_def)
         for observable in normal_observables:
-            print observable.id
             if observable.id not in self.converted_ids:
                 oval_def = oval.DefinitionType(version = 1.0, id = self.mappings.generate_def_id(), classxx = 'miscellaneous', metadata = metadata)
                 oval_criteria = oval.CriteriaType()
