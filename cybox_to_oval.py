@@ -2,7 +2,7 @@
 #Generates valid OVAL 5.7 XML output from CybOX v2.1 XML
 #Supports Windows files, registry keys, and processes
 
-# Copyright (c) 2014, The MITRE Corporation. All rights reserved.
+# Copyright (c) 2015, The MITRE Corporation. All rights reserved.
 # See LICENSE.txt for complete terms.
 
 import cybox_to_oval_processor as cybox2oval
